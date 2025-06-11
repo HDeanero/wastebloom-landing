@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>WasteBloom</title>
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>WasteBloom</title>
 </head>
 <body>
     <nav>
@@ -75,17 +75,20 @@
         <h2>Pricing</h2>
         <div class="pricing-columns">
             <div class="pricing-column">
-                <h3>Sprout ($25/month)</h3>
+                <h3>Sprout</h3>
+                <p>($25/month)</p>
                 <p>Perfect for small-scale farmers, offering AI waste optimization tips and marketplace access to kickstart your growth.</p>
                 <button class="subscribe-btn">Start Your Green Growth</button>
             </div>
             <div class="pricing-column">
-                <h3>Thrive ($50/month)</h3>
+                <h3>Thrive</h3>
+                <p>($50/month)</p>
                 <p>Ideal for growing operations, adding compliance tips, priority buyer connections, and basic analytics to help you flourish.</p>
                 <button class="subscribe-btn">Boost Your Sustainable Yield</button>
             </div>
             <div class="pricing-column">
-                <h3>Bloom ($75/month)</h3>
+                <h3>Bloom</h3>
+                <p>($75/month)</p>
                 <p>Tailored for larger farms, unlocking advanced AI insights, custom compliance support, and enhanced marketplace listings to reach full potential.</p>
                 <button class="subscribe-btn">Unleash Full Potential</button>
             </div>
@@ -118,29 +121,6 @@
         <p class="footer-copyright">© 2025 WasteBloom. All Rights Reserved</p>
     </footer>
 
-    <script>
-        document.querySelector('.nav-links li:first-child a').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector('#footer').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        document.querySelector('.nav-links li:nth-child(2) a').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector('#features').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        document.querySelector('.nav-links li:nth-child(3) a').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector('#pricing').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.querySelector('input[type="email"]').value;
-            console.log(`Waitlist: ${email}`);
-            alert(`Thanks for joining, ${email}! We'll notify you soon.`);
-            document.querySelector('input[type="email"]').value = '';
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
