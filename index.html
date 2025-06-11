@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>WasteBloom</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="images/waste-bloom-logo.png">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li class="link"><a href="#footer">About</a></li>
+            <li class="link"><a href="#features">Features</a></li>
+            <li class="link"><a href="#pricing">Pricing</a></li>
+            <li class="link"><a href="#">Marketplace</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Turn El Paso Farm Waste into Cash</h1>
+        <br>
+        <p><strong>Starting in El Paso, Scaling Worldwide</strong></p>
+        <br>
+        <h3>AI tools to optimize your waste, a marketplace to sell products, and globally specific compliance tips</h3>
+        <br><br>
+        <p><em>WasteBloom</em> was born from a deep-rooted desire to turn 
+            the overlooked potential of farm waste into a thriving 
+            opportunity for our community.</p>
+            <br><br> 
+        <p>Growing up in El Paso, I witnessed the resilience of 
+            local farmers battling the desert climate, often 
+            discarding vegetable scraps that held untapped value.</p>
+            <br><br> 
+        <p>This inspired me to harness the power of AI and innovative 
+            technology to create a solution that not only optimizes 
+            compost but also connects farmers to markets and ensures 
+            sustainable practices.</p>
+            <br><br> 
+        <p>To me, WasteBloom is more than a business—it’s a personal 
+            mission to empower those who feed our city, turning every 
+            scrap into wealth and building a legacy of zero-waste 
+            living.</p>
+            <br><br> 
+        <p>Each step forward, from crafting custom compost plans to 
+            seeing local sales flourish, fills me with pride and 
+            reinforces my commitment to growing this vision from 
+            desert roots into a global movement that honors both 
+            people and the planet.</p>
+    </header>
+
+    <section id="features" class="features">
+        <h2>Why Choose WasteBloom?</h2>
+        <div class="feature-columns">
+            <div class="feature-column">
+                <h3>Personalized AI Waste Recipes</h3>
+                <p>Our AI analyzes your vegetable scraps—like carrot peels or lettuce trimmings—and crafts custom compost plans tailored to El Paso’s desert climate, helping you maximize every yield with ease.</p>
+            </div>
+            <div class="feature-column">
+                <h3>Hyper-Local Marketplace</h3>
+                <p>Connect with buyers in your area instantly! List your products with one click and sell to local gardeners or restaurants within a 5-mile radius, making sales simpler and faster.</p>
+            </div>
+            <div class="feature-column">
+                <h3>Gamified Green Points</h3>
+                <p>Earn Green Points for every kilo you process or sale you make—redeem them for premium features or a free month, and get 200 points for referring friends to join the journey!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-columns">
+            <div class="pricing-column">
+                <h3>Sprout ($25/month)</h3>
+                <p>Perfect for small-scale farmers, offering AI waste optimization tips and marketplace access to kickstart your growth.</p>
+                <button class="subscribe-btn">Start Your Green Growth</button>
+            </div>
+            <div class="pricing-column">
+                <h3>Thrive ($50/month)</h3>
+                <p>Ideal for growing operations, adding compliance tips, priority buyer connections, and basic analytics to help you flourish.</p>
+                <button class="subscribe-btn">Boost Your Sustainable Yield</button>
+            </div>
+            <div class="pricing-column">
+                <h3>Bloom ($75/month)</h3>
+                <p>Tailored for larger farms, unlocking advanced AI insights, custom compliance support, and enhanced marketplace listings to reach full potential.</p>
+                <button class="subscribe-btn">Unleash Full Potential</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="footer-column brand">
+            <h3>WasteBloom</h3>
+            <p>At WasteBloom, our purpose is to empower urban farmers with innovative solutions to transform waste into wealth, building a sustainable future—one scrap at a time. Join us on this green journey as we grow from desert roots right here in El Paso to a worldwide movement for zero-waste living.</p>
+        </div>
+        <div class="footer-column contact">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:support@wastebloom.com">support@wastebloom.com</a></p>
+            <p>Phone: (915) 555-0123</p>
+            <p>El Paso, TX</p>
+        </div>
+        <div class="footer-column newsletter">
+            <h3>Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">→</button>
+            </form>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <p class="footer-copyright">© 2025 WasteBloom. All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-links li:first-child a').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#footer').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.querySelector('.nav-links li:nth-child(2) a').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#features').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.querySelector('.nav-links li:nth-child(3) a').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#pricing').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.querySelector('input[type="email"]').value;
+            console.log(`Waitlist: ${email}`);
+            alert(`Thanks for joining, ${email}! We'll notify you soon.`);
+            document.querySelector('input[type="email"]').value = '';
+        });
+    </script>
+</body>
+</html>

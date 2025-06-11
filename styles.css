@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #d9dfcc;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    flex-wrap: wrap;
+    background-color: #d9dfcc;
+}
+
+.nav-logo {
+    max-width: 100px;
+}
+
+.nav-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    flex: 1;
+}
+
+.link {
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.link a {
+    color: brown;
+    text-decoration: none;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: darkgreen;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 80%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-links li:first-child a {
+    cursor: pointer;
+}
+
+.nav-links li:nth-child(2) a {
+    cursor: pointer;
+}
+
+.nav-links li:nth-child(3) a {
+    cursor: pointer;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e8ece1;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #4a7043;
+}
+
+header h3 {
+    color: #4a7043;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* Features Section */
+.features {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.features h2 {
+    text-align: center;
+    color: #4a7043;
+    margin-bottom: 1rem;
+}
+
+.feature-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.feature-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+    background-color: #f0f4eb;
+    border: 1px solid #d9dfcc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.feature-column h3 {
+    color: #4a7043;
+    margin-bottom: 0.5rem;
+}
+
+.feature-column p {
+    color: #333;
+    font-size: 0.9em;
+}
+
+.pricing {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #e8ece1;
+}
+
+.pricing h2 {
+    text-align: center;
+    color: #4a7043;
+    margin-bottom: 1rem;
+}
+
+.pricing-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pricing-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+    background-color: #f0f4eb;
+    border: 1px solid #d9dfcc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pricing-column h3 {
+    color: #4a7043;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-column p {
+    color: #333;
+    font-size: 0.9em;
+}
+
+.subscribe-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #4a7043;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.5s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #3a5a33;
+}
+
+.footer {
+    background-color: #6b7c61;
+    color: #d9dfcc;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-top-left-radius: 10px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 1rem;
+}
+
+.brand h3,
+.contact h3,
+.newsletter h3 {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.brand p,
+.contact p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.contact a {
+    color: #d9dfcc;
+}
+
+.newsletter p {
+    font-size: 0.9em;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #d9dfcc;
+    border-radius: 4px;
+    flex: 1;
+    background-color: white;
+}
+
+.newsletter button {
+    padding: 0.7rem 1rem;
+    background-color: #d9dfcc;
+    color: #6b7c61;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #c4cfae;
+}
+
+.social-icons {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    color: #d9dfcc;
+    font-size: 1.6em;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 2rem;
+    color: #d9dfcc;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        border-top-left-radius: 0;
+    }
+
+    .footer-column {
+        margin-bottom: 1rem;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input[type="email"] {
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-columns,
+    .pricing-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-column,
+    .pricing-column {
+        width: 80%;
+    }
+}
