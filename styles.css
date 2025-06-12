@@ -29,13 +29,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8rem;
+    gap: 10rem;
     flex-wrap: wrap;
     background-color: #d9dfcc;
-}
-
-h4{
-    color: #2b463c;
+    position: relative;
 }
 
 .nav-logo {
@@ -51,7 +48,7 @@ h4{
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 6rem;
+    gap: 5rem;
     flex: 1;
 }
 
@@ -96,6 +93,67 @@ html {
     cursor: pointer;
 }
 
+.points-dropdown {
+    position: relative;
+}
+
+.points-trigger {
+    color: brown;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.points-trigger::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: darkgreen;
+    transition: all 0.3s ease;
+}
+
+.points-trigger:hover::after {
+    width: 80%;
+}
+
+.points-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #f0f4eb;
+    border: 2px solid #4a7043;
+    border-radius: 5px;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.points-menu li {
+    padding: 0.5rem 1rem;
+}
+
+.points-menu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.points-menu li a:hover {
+    background: #e6ece3;
+}
+
+.points-dropdown:hover .points-menu {
+    display: block;
+}
+
 header {
     text-align: center;
     padding: 2rem;
@@ -103,7 +161,7 @@ header {
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 3em;
     color: #4a7043;
 }
 
@@ -185,6 +243,8 @@ header p {
     border: 1px solid #d9dfcc;
     border-radius: 5px;
     text-align: center;
+    position: relative;
+    transition: all 0.5s ease;
 }
 
 .pricing-column h3 {
@@ -212,6 +272,88 @@ header p {
 
 .subscribe-btn:hover {
     background-color: #3a5a33;
+}
+
+.plant-themed {
+    border: 4px solid #4a7043;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(74, 112, 67, 0.5);
+    transform: scale(1.05);
+    background-color: #e6ece3;
+}
+
+.plant-themed h3 {
+    color: #355e30;
+}
+
+.plant-themed::before {
+    content: "Unlock Marketplace Insights!";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4a7043;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* New: Marketplace Insights Overlay (adjusted position) */
+.marketplace-insights {
+    display: none;
+    position: fixed;
+    top: 20px; /* Position near top to avoid covering pricing */
+    right: 20px; /* Align to right side */
+    transform: none; /* Remove center transform */
+    background: #f0f4eb;
+    padding: 20px;
+    border: 3px solid #4a7043;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(74, 112, 67, 0.5);
+    z-index: 1000;
+    max-width: 350px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.marketplace-insights.active {
+    display: block;
+}
+
+.insights-content {
+    text-align: left;
+}
+
+.insights-content h3 {
+    color: #4a7043;
+    margin-bottom: 10px;
+}
+
+.insights-content p, .insights-content ul {
+    color: #333;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.insights-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.close-insights {
+    display: block;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background: #4a7043;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-insights:hover {
+    background: #3a5a33;
 }
 
 .footer {
